@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LexDepth - Vocabulary Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>LexDepth</h1>
+    <div class="header-controls">
+      <div class="level-selector">
+        <button id="elementaryBtn" class="level-btn active">Elementary</button>
+        <button id="intermediateBtn" class="level-btn">Intermediate</button>
+        <button id="advancedBtn" class="level-btn">Advanced</button>
+      </div>
+      <button id="reviewBtn" class="review-btn">
+        📘 Review Learned
+      </button>
+      <button id="themeToggle">☀ / 🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="level-indicator">
+      <span id="currentLevel">Elementary</span>
+      <span id="wordCount">Word 1 of 10</span>
+    </div>
+
+    <div class="card">
+      <div class="word" id="word"></div>
+      <div id="examples"></div>
+      <div id="definition" class="definition" style="display:none;"></div>
+
+      <div class="nav">
+        <button id="prevBtn">← Previous</button>
+        <button id="revealBtn">Reveal meaning</button>
+        <button id="learnedBtn">✓ Learned</button>
+        <button id="nextBtn">Next →</button>
+      </div>
+    </div>
+
+    <div class="card" id="exerciseCard">
+      <h2 style="margin-top:0">Practice</h2>
+      <div id="exercise"></div>
+      <button id="checkBtn" style="margin-top:1rem">Check Answer</button>
+      <div id="feedback" class="notes" style="margin-top:0.8rem"></div>
+    </div>
+  </main>
+
+  <footer>
+    Daily Digest • Context-first vocabulary learning • LexDepth
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
